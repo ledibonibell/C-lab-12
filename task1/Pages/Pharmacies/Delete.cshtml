@@ -1,0 +1,12 @@
+﻿@page "{id}"
+@model WebServer.Pages.Pharmacies.DeleteModel
+@{
+}
+
+<h1 class="mt-4">Do you want, to delete pharmacy #@Model.Pharmacy.PharmacyId?</h1>
+<form class="mt-4" method="post">
+    <div class="form-row">
+        <button type="submit" class="btn btn-danger">Yes</button>
+        <a class="btn btn-secondary ml-2" asp-page="/Pharmacies/Pharmacies">No</a>
+    </div>
+</form>

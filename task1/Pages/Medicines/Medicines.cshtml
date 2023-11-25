@@ -1,0 +1,24 @@
+﻿@page
+@model WebServer.Pages.Medicines.MedicinesModel
+@{
+}
+
+<h1 class="mt-4">Discover Our Medicines, they are realy nice</h1>
+
+<div class="row mt-4">
+    @foreach (var item in Model.Medicines)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Medicine ID: @item.MedicineId</h5>
+                    <p class="card-text">Some additional information about the medicine.</p>
+                    <div class="btn-group" role="group" aria-label="Medicine Actions">
+                        <a class="btn btn-primary" href="@Url.Page("/Medicines/Edit", new { Id = item.MedicineId })">Update</a>
+                        <a class="btn btn-danger" href="@Url.Page("/Medicines/Delete", new { Id = item.MedicineId })">Don't click</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

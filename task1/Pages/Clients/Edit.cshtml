@@ -1,0 +1,19 @@
+﻿@page "{id:min(1)?}"
+@model WebServer.Pages.Clients.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Client!</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Client.ClientId" />
+    <div class="passEditRowName">
+        <label asp-for="Client.Name">Edit name: </label>
+        <input asp-for="Client.Name" placeholder="@Model.Client.Name" />
+    </div>
+    <div class="row">
+        <button type="submit">Update</button>
+        <a asp-page="/Clients/Clients">Cancel</a>
+    </div>
+</form>

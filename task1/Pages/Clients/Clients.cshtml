@@ -1,0 +1,19 @@
+﻿@page
+@model WebServer.Pages.Clients.ClientsModel
+@{
+}
+
+<h1>Clients!</h1>
+
+<a asp-page="/Clients/Edit" class="createClient">Add client</a>
+
+<div class="row">
+    @foreach (var item in Model.Clients)
+    {
+        <div class="pass">
+            <div class="name">@item.Name</div>
+            <div class="update"><a asp-page="/Clients/Edit" asp-route-Id="@item.ClientId">Update</a></div>
+            <div class="delete"><a asp-page="/Clients/Delete" asp-route-Id="@item.ClientId">Delete</a></div>
+        </div>
+     }
+</div>

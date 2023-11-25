@@ -1,0 +1,19 @@
+﻿@page "{id:min(1)?}"
+@model WebServer.Pages.Medicines.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1 class="mt-4">Try to edit Medicine</h1>
+
+<form class="mt-4" method="post">
+    <input type="hidden" asp-for="Medicine.MedicineId" />
+    <div class="form-group mt-2">
+        <label asp-for="Medicine.Price">Edit Price:</label>
+        <input class="form-control" asp-for="Medicine.Price" placeholder="@Model.Medicine.Price" />
+    </div>
+    <div class="form-row mt-2">
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a class="btn btn-secondary ml-2" asp-page="/Medicines/Medicines">Cancel</a>
+    </div>
+</form>

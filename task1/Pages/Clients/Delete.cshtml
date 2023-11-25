@@ -1,0 +1,10 @@
+﻿@page "{id}"
+@model WebServer.Pages.Clients.DeleteModel
+@{
+}
+
+<h1>Delete client @Model.Client.ClientId</h1>
+<form method="post">
+    <button type="submit">Yes</button>
+    <a asp-page="/Clients/Clients">No</a>
+</form>
